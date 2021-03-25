@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="r0cNpL" name="sfizz" projectType="audioplug" jucerVersion="5.4.3"
-              cppLanguageStandard="latest" reportAppUsage="0" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+<JUCERPROJECT id="r0cNpL" name="sfizz" projectType="audioplug" cppLanguageStandard="17"
+              reportAppUsage="0" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
               version="0.1.0" companyName="SFZTools" companyWebsite="https://sfztools.github.io"
               bundleIdentifier="org.sfztools.sfizz" pluginName="sfizz" pluginDesc="SFZ Player"
               pluginManufacturer="SFZTools" pluginManufacturerCode="SFZT" pluginCode="SFZT"
-              aaxIdentifier="org.sfztools.sfizz" pluginAUExportPrefix="sfizzAU">
+              aaxIdentifier="org.sfztools.sfizz" pluginAUExportPrefix="sfizzAU"
+              displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="R5AZRy" name="sfizz">
     <GROUP id="{B195BF29-7091-C3C3-5EDD-E4A6DE8FADE9}" name="Source">
       <FILE id="UkM4JT" name="JuceHelpers.h" compile="0" resource="0" file="Source/JuceHelpers.h"/>
@@ -22,8 +23,6 @@
       <FILE id="beB6YM" name="SfzSynth.h" compile="0" resource="0" file="Source/SfzSynth.h"/>
       <FILE id="cM4gyA" name="SfzVoice.cpp" compile="1" resource="0" file="Source/SfzVoice.cpp"/>
       <FILE id="yZ9klx" name="SfzVoice.h" compile="0" resource="0" file="Source/SfzVoice.h"/>
-      <FILE id="tZgYr8" name="StdStringTrimmers.h" compile="0" resource="0"
-            file="Source/StdStringTrimmers.h"/>
       <FILE id="h8OF2g" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="nY7w9D" name="PluginProcessor.h" compile="0" resource="0"

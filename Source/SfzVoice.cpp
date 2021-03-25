@@ -354,9 +354,9 @@ void SfzVoice::fillWithFileData(dsp::AudioBlock<float> block, int releaseOffset)
         decimalPosition -= sampleStep;
     }
 
-    nextPositionBlock.multiply(interpolationBlock);
+    nextPositionBlock.multiplyBy(interpolationBlock);
     interpolationBlock.negate().add(1.0f);
-    block.multiply(interpolationBlock).add(nextPositionBlock);
+    block.multiplyBy(interpolationBlock).add(nextPositionBlock);
 }
 
 void SfzVoice::fillWithPreloadedData(dsp::AudioBlock<float> block, int releaseOffset) noexcept
@@ -394,9 +394,9 @@ void SfzVoice::fillWithPreloadedData(dsp::AudioBlock<float> block, int releaseOf
         decimalPosition -= sampleStep;
     }
 
-    nextPositionBlock.multiply(interpolationBlock);
+    nextPositionBlock.multiplyBy(interpolationBlock);
     interpolationBlock.negate().add(1.0f);
-    block.multiply(interpolationBlock).add(nextPositionBlock);
+    block.multiplyBy(interpolationBlock).add(nextPositionBlock);
 }
 
 
@@ -418,11 +418,11 @@ void SfzVoice::renderNextBlock(AudioBuffer<float>& outputBuffer, int startSample
     if (region->amplitudeCC)
     {
         amplitudeEnvelope.getEnvelope(localEnvelopeBuffer);
-        outputBlock.multiply(localEnvelopeBuffer);
+        outputBlock.multiplyBy(localEnvelopeBuffer);
     }
     else
     {
-        outputBlock.multiply(baseGain);
+        outputBlock.multiplyBy(baseGain);
     }
 
     if (state == SfzVoiceState::release && !amplitudeEGEnvelope.isSmoothing() && !fileLoadingPool.contains(this))
