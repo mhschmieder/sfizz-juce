@@ -69,7 +69,7 @@ std::string joinIntoString(const std::vector<std::string>& lines)
 		fullString += line;
 		fullString += ' ';
 	}
-	return std::move(fullString);
+	return fullString;
 }
 
 void SfzSynth::readSfzFile(const std::filesystem::path& fileName, std::vector<std::string>& lines) noexcept

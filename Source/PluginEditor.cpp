@@ -26,8 +26,8 @@
 
 //==============================================================================
 SfzpluginAudioProcessorEditor::SfzpluginAudioProcessorEditor (SfzpluginAudioProcessor& p, MidiKeyboardState& keyboardState, const SfzSynth& synth)
-    : AudioProcessorEditor (&p), processor (p), sfzChooser(SfzFileChooser(p)), synth(synth),
-        keyboardComponent(keyboardState, MidiKeyboardComponent::Orientation::horizontalKeyboard)
+    : AudioProcessorEditor (&p), processor (p),
+        keyboardComponent(keyboardState, MidiKeyboardComponent::Orientation::horizontalKeyboard), synth(synth), sfzChooser(SfzFileChooser(p))
 {
     setSize(600, 300);
     addAndMakeVisible(openButton);
